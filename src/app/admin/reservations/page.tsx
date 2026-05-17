@@ -218,21 +218,27 @@ export default function AdminReservationsPage() {
     try {
       setLoading(true);
 
-      const { data, error } = await supabase
-        .from('reservations')
-        .select('*')
-        .order('created_at', { ascending: false });
+      const { data: { session } } = await supabase.auth.getSession();
+      if (!session) {
+        toast.error('You must be logged in to view reservations');
+        return;
+      }
 
-      if (error) {
-        console.error('Error fetching reservations:', error);
+      const response = await fetch('/api/admin/reservations', {
+        headers: { 'Authorization': `Bearer ${session.access_token}` }
+      });
+
+      if (!response.ok) {
         toast.error('Failed to fetch reservations');
         return;
       }
 
+      const result = await response.json();
+      const data: Reservation[] = result.data || [];
+
       // Auto-mark past reservations as completed
       const reservationsToUpdate: string[] = [];
-      const updatedData = (data || []).map(reservation => {
-        // Only update if reservation has passed and is not already completed or cancelled
+      const updatedData = data.map(reservation => {
         if (isPastReservation(reservation) &&
             reservation.status !== 'completed' &&
             reservation.status !== 'cancelled') {
@@ -242,17 +248,18 @@ export default function AdminReservationsPage() {
         return reservation;
       });
 
-      // Update past reservations in database
+      // Update past reservations via API
       if (reservationsToUpdate.length > 0) {
-        console.log(`Auto-marking ${reservationsToUpdate.length} past reservations as completed`);
-
-        // Update all past reservations in parallel
         await Promise.all(
           reservationsToUpdate.map(id =>
-            supabase
-              .from('reservations')
-              .update({ status: 'completed' })
-              .eq('id', id)
+            fetch('/api/admin/reservations', {
+              method: 'PATCH',
+              headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${session.access_token}`
+              },
+              body: JSON.stringify({ id, status: 'completed' })
+            })
           )
         );
       }
@@ -384,24 +391,26 @@ export default function AdminReservationsPage() {
     try {
       console.log('Attempting to update reservation:', { reservationId, newStatus });
 
-      const { data, error } = await supabase
-        .from('reservations')
-        .update({ status: newStatus })
-        .eq('id', reservationId)
-        .select();
-
-      if (error) {
-        console.error('Error updating status:', {
-          message: error.message,
-          details: error.details,
-          hint: error.hint,
-          code: error.code
-        });
-        toast.error(`Failed to update status: ${error.message}`);
+      const { data: { session } } = await supabase.auth.getSession();
+      if (!session) {
+        toast.error('You must be logged in to update reservations');
         return;
       }
 
-      console.log('Update successful:', data);
+      const response = await fetch('/api/admin/reservations', {
+        method: 'PATCH',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${session.access_token}`
+        },
+        body: JSON.stringify({ id: reservationId, status: newStatus })
+      });
+
+      if (!response.ok) {
+        const result = await response.json();
+        toast.error(`Failed to update status: ${result.error || 'Unknown error'}`);
+        return;
+      }
 
       // Get the reservation data for email notifications
       const reservation = reservations.find(r => r.id === reservationId);
@@ -594,19 +603,26 @@ export default function AdminReservationsPage() {
         updateData
       });
 
-      const { data, error } = await supabase
-        .from('reservations')
-        .update(updateData)
-        .eq('id', editingReservation.id)
-        .select();
-
-      if (error) {
-        console.error('❌ Error updating reservation:', error);
-        toast.error('Failed to update reservation');
+      const { data: { session } } = await supabase.auth.getSession();
+      if (!session) {
+        toast.error('You must be logged in to update reservations');
         return;
       }
 
-      console.log('✅ Update response from database:', data);
+      const response = await fetch('/api/admin/reservations', {
+        method: 'PATCH',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${session.access_token}`
+        },
+        body: JSON.stringify({ id: editingReservation.id, ...updateData })
+      });
+
+      if (!response.ok) {
+        console.error('❌ Error updating reservation');
+        toast.error('Failed to update reservation');
+        return;
+      }
 
       // Check if status changed to confirmed or cancelled
       const originalReservation = reservations.find(r => r.id === editingReservation.id);
