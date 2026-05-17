@@ -12,7 +12,6 @@ import { getBlogPostBySlug, getRelatedBlogPosts, getAdjacentBlogPosts, formatBlo
 import type { Blog } from '@/types/blog'
 import CommentSection from '../../../components/CommentSection'
 import SocialShare from '../../../components/SocialShare'
-import Head from 'next/head'
 
 export default function BlogPostPage() {
   const params = useParams()
@@ -53,7 +52,7 @@ export default function BlogPostPage() {
       const blogData = await getBlogPostBySlug(slug, i18n.language)
 
       if (!blogData) {
-        notFound()
+        setError('Blog post not found.')
         return
       }
 
@@ -297,34 +296,6 @@ export default function BlogPostPage() {
 
   return (
     <>
-      <Head>
-        <title>{blog.meta_title || blog.title} - East At West</title>
-        <meta name="description" content={blog.meta_description || blog.excerpt || 'Read more on the East At West blog'} />
-        <meta name="keywords" content={blog.tags?.join(', ') || 'Lebanese cuisine, Brussels restaurant'} />  
-            <link
-      rel="canonical"
-      href={`https://eastatwest.com/blog/${blog.slug}`}
-    />
-        {/* Open Graph */}
-        <meta property="og:title" content={blog.title} />
-        <meta property="og:description" content={blog.excerpt || blog.meta_description || ''} />
-        <meta property="og:image" content={blog.cover_image_url || '/images/logo.webp'} />
-        <meta property="og:url" content={`https://eastatwest.com/blog/${blog.slug}`} />
-        <meta property="og:type" content="article" />
-        
-        {/* Twitter Card */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={blog.title} />
-        <meta name="twitter:description" content={blog.excerpt || blog.meta_description || ''} />
-        <meta name="twitter:image" content={blog.cover_image_url || '/images/logo.webp'} />
-        
-        {/* Structured Data */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-        />
-      </Head>
-
       {/* Google reCAPTCHA v3 Script */}
       {process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY && (
         <Script
