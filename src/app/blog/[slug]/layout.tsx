@@ -1,17 +1,24 @@
 import { Metadata } from 'next'
 
-export const metadata: Metadata = {
-  title: 'Blog - East @ West Lebanese Restaurant Brussels',
-  description: 'Lebanese cuisine blog: recipes, cooking tips & culinary traditions. Discover authentic Mediterranean food culture from East @ West Brussels.',
-  alternates: {
-    canonical: 'https://eastatwest.com/blog',
-    languages: {
-      'en': 'https://eastatwest.com/blog',
-      'fr': 'https://eastatwest.com/blog',
-      'nl': 'https://eastatwest.com/blog',
-      'x-default': 'https://eastatwest.com/blog',
+type Props = {
+  params: Promise<{ slug: string }>
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params
+  const canonical = `https://eastatwest.com/blog/${slug}`
+
+  return {
+    alternates: {
+      canonical,
+      languages: {
+        'en': canonical,
+        'fr': canonical,
+        'nl': canonical,
+        'x-default': canonical,
+      },
     },
-  },
+  }
 }
 
 export default function BlogLayout({
