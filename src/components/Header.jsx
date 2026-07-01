@@ -138,7 +138,7 @@ const Header = () => {
               {[
                 { href: '/menu', label: t('nav.menu') },
                 { href: '/lebanese-restaurant-brussels', label: t('nav.lebanese') },
-                { href: '/reservations', label: t('nav.reservations') },
+                { href: 'https://reservations.eastatwest.com/', label: t('nav.reservations') },
                 { href: '/takeaway', label: t('nav.takeaway') },
                 { href: '/blog', label: t('nav.blog') },
                 { href: '/events-catering', label: t('nav.events') },
@@ -255,7 +255,7 @@ const Header = () => {
                 {[
                   { href: '/menu', label: t('nav.menu'), icon: '🍽️' },
                   { href: '/lebanese-restaurant-brussels', label: t('nav.lebanese'), icon: '🇱🇧' },
-                  { href: '/reservations', label: t('nav.reservations'), icon: '📅' },
+                  { href: 'https://reservations.eastatwest.com/', label: t('nav.reservations'), icon: '📅' },
                   { href: '/takeaway', label: t('nav.takeaway'), icon: '🥡' },
                   { href: '/blog', label: t('nav.blog'), icon: '📝' },
                   { href: '/events-catering', label: t('nav.events'), icon: '🎉' },

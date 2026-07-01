@@ -12,6 +12,12 @@
 /wp-includes/*                  /                       301!
 /wp-json/*                      /                       301!
 
+# Reservations now live on their own subdomain
+/reservations                   https://reservations.eastatwest.com/  301
+/reservation                    https://reservations.eastatwest.com/  301
+/reserve                        https://reservations.eastatwest.com/  301
+/booking                        https://reservations.eastatwest.com/  301
+
 # Old WordPress page URLs to new Next.js routes
 /about-snack-halal              /about                  301
 /gallery-vegan-dessert          /gallery                301

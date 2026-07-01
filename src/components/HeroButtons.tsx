@@ -38,7 +38,7 @@ export default function HeroButtons() {
     <div className="flex flex-col sm:flex-row gap-5 justify-center items-center mt-4">
       {/* Primary CTA - Reserve Table */}
       <Link
-        href="/reservations"
+        href="https://reservations.eastatwest.com/"
         className="inline-flex items-center justify-center gap-2 text-base px-6 py-3 font-bold shadow-2xl transition-all duration-300 border-2 rounded-md"
         style={{
           background: 'linear-gradient(to right, rgb(168,213,186), rgb(140,193,166))',

@@ -108,25 +108,30 @@ export default {
       { source: '/gallery-vegan-dessert', destination: '/gallery', permanent: true },
 
       // === EXISTING REDIRECTS ===
-      // Reservation redirects
+      // Reservations now live on their own subdomain
+      {
+        source: '/reservations',
+        destination: 'https://reservations.eastatwest.com/',
+        permanent: true,
+      },
       {
         source: '/reservation',
-        destination: '/reservations',
+        destination: 'https://reservations.eastatwest.com/',
         permanent: true,
       },
       {
         source: '/Reservation',
-        destination: '/reservations',
+        destination: 'https://reservations.eastatwest.com/',
         permanent: true,
       },
       {
         source: '/reserve',
-        destination: '/reservations',
+        destination: 'https://reservations.eastatwest.com/',
         permanent: true,
       },
       {
         source: '/booking',
-        destination: '/reservations',
+        destination: 'https://reservations.eastatwest.com/',
         permanent: true,
       },
       // Explicit trailing slash redirects - redirect URLs with trailing slash to without

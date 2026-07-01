@@ -206,7 +206,7 @@ const Footer = () => {
             "name": "East at West",
             "description": "Authentic Lebanese cuisine in the heart of Brussels",
             "url": "https://eastatwest.com",
-            "acceptsReservations": "https://eastatwest.com/reservations",
+            "acceptsReservations": "https://reservations.eastatwest.com/",
             "telephone": t('footer.phone'),
             "email": t('footer.email'),
             "address": {

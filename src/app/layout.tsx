@@ -296,7 +296,7 @@ export default function RootLayout({
                   "@type": "ReserveAction",
                   target: {
                     "@type": "EntryPoint",
-                    urlTemplate: "https://eastatwest.com/reservations",
+                    urlTemplate: "https://reservations.eastatwest.com/",
                     actionPlatform: [
                       "http://schema.org/DesktopWebPlatform",
                       "http://schema.org/MobileWebPlatform"
