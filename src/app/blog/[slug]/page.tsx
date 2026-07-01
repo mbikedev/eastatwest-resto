@@ -296,6 +296,13 @@ export default function BlogPostPage() {
 
   return (
     <>
+      {/* Article Structured Data */}
+      <Script
+        id="article-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+
       {/* Google reCAPTCHA v3 Script */}
       {process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY && (
         <Script
