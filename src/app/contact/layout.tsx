@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Contact East @ West | Lebanese Restaurant Brussels',
-    description: 'Rue de la Bourse 15, 1000 Brussels | +32-2-503-5303 | Reservations & Inquiries Welcome',
+    description: 'Bld de l\'Empereur 26, 1000 Brussels | +32 465 20 60 24 | Reservations & Inquiries Welcome',
     url: 'https://eastatwest.com/contact',
     type: 'website',
     locale: 'en_US',
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Contact East @ West | Lebanese Restaurant Brussels',
-    description: 'Rue de la Bourse 15, 1000 Brussels | +32-2-503-5303',
+    description: 'Bld de l\'Empereur 26, 1000 Brussels | +32 465 20 60 24',
     images: ['https://eastatwest.com/images/banner.webp'],
   },
   robots: {

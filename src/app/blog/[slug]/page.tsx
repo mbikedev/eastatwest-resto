@@ -122,11 +122,11 @@ export default function BlogPostPage() {
         flushList()
         elements.push(
           <header key={index} className="mb-12 text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black mb-6 leading-tight">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black mb-6 leading-tight">
               <span className="bg-gradient-to-r from-[#A8D5BA] via-[#A8D5BA] to-[#A8D5BA] bg-clip-text text-transparent">
                 {trimmed.substring(2)}
               </span>
-            </h1>
+            </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-[#A8D5BA] to-[#A8D5BA] mx-auto rounded-full"></div>
           </header>
         )
