@@ -1,53 +1,19 @@
 'use client'
 
 import { useTheme } from '@/context/ThemeContext'
+import { useTranslation } from 'react-i18next'
 import { m } from 'framer-motion'
+
+const FAQ_KEYS = ['q1', 'q2', 'q3', 'q4', 'q5', 'q6', 'q7', 'q8', 'q9', 'q10']
 
 export default function FAQPage() {
   const { theme } = useTheme()
+  const { t } = useTranslation('common')
 
-  const faqs = [
-    {
-      question: "What are your opening hours?",
-      answer: "We are open Monday to Friday from 11:30 AM to 2:00 PM for lunch. On Saturday, we serve dinner from 6:00 PM to 10:00 PM. We are closed on Sundays."
-    },
-    {
-      question: "Is your restaurant halal-certified?",
-      answer: "Yes, all our meat and poultry are halal-certified. We take pride in serving authentic Lebanese cuisine prepared according to halal standards."
-    },
-    {
-      question: "Do you have vegan and vegetarian options?",
-      answer: "Absolutely! We offer a wide variety of vegan and vegetarian dishes including hummus, falafel, tabbouleh, fattoush, grilled vegetables, and many mezze options. Our menu clearly indicates vegan and vegetarian choices."
-    },
-    {
-      question: "Can I make a reservation?",
-      answer: "Yes, we highly recommend making a reservation, especially for dinner and weekends. You can book a table through our website's reservations page or call us at +32 465 20 60 24."
-    },
-    {
-      question: "Do you offer takeaway services?",
-      answer: "Yes, we offer takeaway for all menu items. You can view our takeaway menu online and place orders for pickup. We also provide catering services for events."
-    },
-    {
-      question: "Is parking available near the restaurant?",
-      answer: "Yes, there are several public parking options near our location at Bld de l'Empereur 26 in Brussels. Street parking and nearby parking garages are available."
-    },
-    {
-      question: "Do you accommodate large groups?",
-      answer: "Yes, we welcome group bookings for special occasions, corporate events, and private dining. Please contact us in advance to discuss your requirements and we'll arrange the perfect setup for your party."
-    },
-    {
-      question: "What payment methods do you accept?",
-      answer: "We accept cash, credit cards, and debit cards (Visa, Mastercard, American Express). Payment can be made at the restaurant or when collecting takeaway orders."
-    },
-    {
-      question: "Do you offer gluten-free options?",
-      answer: "Many of our dishes are naturally gluten-free, including grilled meats, salads, and certain mezze. Please inform our staff about dietary restrictions and we'll be happy to recommend suitable options."
-    },
-    {
-      question: "Can I host a private event at your restaurant?",
-      answer: "Yes, we offer event catering and private dining services. Whether it's a wedding, corporate event, or birthday celebration, we can create a custom menu and arrangement. Contact us to discuss your event needs."
-    }
-  ]
+  const faqs = FAQ_KEYS.map(key => ({
+    question: t(`faq.${key}.question`),
+    answer: t(`faq.${key}.answer`)
+  }))
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -78,10 +44,10 @@ export default function FAQPage() {
           transition={{ duration: 0.6 }}
         >
           <h1 className={`text-4xl sm:text-5xl font-bold mb-4 ${theme === 'dark' ? 'text-white' : 'text-black'}`}>
-            Frequently Asked Questions
+            {t('faq.title')}
           </h1>
           <p className={`text-lg ${theme === 'dark' ? 'text-gray-300' : 'text-gray-600'}`}>
-            Everything you need to know about East @ West Lebanese Restaurant in Brussels
+            {t('faq.subtitle')}
           </p>
         </m.div>
 
@@ -117,7 +83,7 @@ export default function FAQPage() {
           transition={{ duration: 0.6, delay: 0.8 }}
         >
           <p className={`text-lg mb-4 ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`}>
-            Still have questions?
+            {t('faq.stillQuestions')}
           </p>
           <a
             href="/contact"
@@ -127,7 +93,7 @@ export default function FAQPage() {
                 : 'bg-black text-white hover:bg-gray-800'
             }`}
           >
-            Contact Us
+            {t('faq.contactUs')}
           </a>
         </m.div>
       </div>

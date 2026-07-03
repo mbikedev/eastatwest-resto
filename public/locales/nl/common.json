@@ -1542,5 +1542,51 @@
       "reserveTable": "Reserveer een Tafel",
       "orderTakeaway": "Bestel Afhaal"
     }
+  },
+  "faq": {
+    "title": "Veelgestelde Vragen",
+    "subtitle": "Alles wat u moet weten over East At West, Libanees restaurant in Brussel",
+    "stillQuestions": "Heeft u nog vragen?",
+    "contactUs": "Contacteer ons",
+    "q1": {
+      "question": "Wat zijn jullie openingsuren?",
+      "answer": "Wij zijn open van maandag tot vrijdag van 11u30 tot 14u00 voor lunch. Op zaterdag serveren wij diner van 18u00 tot 22u00. Op zondag zijn wij gesloten."
+    },
+    "q2": {
+      "question": "Is jullie restaurant halal-gecertificeerd?",
+      "answer": "Ja, al ons vlees en gevogelte is halal-gecertificeerd. Wij zijn er trots op authentieke Libanese gerechten te serveren die volgens halalnormen worden bereid."
+    },
+    "q3": {
+      "question": "Hebben jullie veganistische en vegetarische opties?",
+      "answer": "Absoluut! Wij bieden een ruime keuze aan veganistische en vegetarische gerechten, waaronder hummus, falafel, tabbouleh, fattoush, gegrilde groenten en veel mezze-opties. Onze menukaart geeft duidelijk aan welke gerechten vegetarisch of veganistisch zijn."
+    },
+    "q4": {
+      "question": "Kan ik een tafel reserveren?",
+      "answer": "Ja, wij raden u sterk aan te reserveren, zeker voor het diner en in het weekend. U kunt een tafel boeken via de reservatiepagina op onze website of ons bellen op +32 465 20 60 24."
+    },
+    "q5": {
+      "question": "Bieden jullie afhaalmaaltijden aan?",
+      "answer": "Ja, al onze gerechten zijn beschikbaar om af te halen. U kunt onze afhaalkaart online bekijken en bestellen om op te halen. Wij verzorgen ook catering voor evenementen."
+    },
+    "q6": {
+      "question": "Is er parkeergelegenheid in de buurt van het restaurant?",
+      "answer": "Ja, er zijn verschillende openbare parkeermogelijkheden in de buurt van onze locatie aan de Keizerslaan 26 (Bld de l'Empereur) in Brussel. Er is straatparkeren en er zijn parkeergarages in de buurt."
+    },
+    "q7": {
+      "question": "Verwelkomen jullie grote groepen?",
+      "answer": "Ja, wij verwelkomen groepsreserveringen voor speciale gelegenheden, bedrijfsevenementen en privédiners. Neem vooraf contact met ons op om uw wensen te bespreken en wij zorgen voor de perfecte opstelling voor uw gezelschap."
+    },
+    "q8": {
+      "question": "Welke betaalmethoden accepteren jullie?",
+      "answer": "Wij accepteren contant geld, kredietkaarten en debetkaarten (Visa, Mastercard, American Express). U kunt betalen in het restaurant of bij het afhalen van uw bestelling."
+    },
+    "q9": {
+      "question": "Bieden jullie glutenvrije opties aan?",
+      "answer": "Veel van onze gerechten zijn van nature glutenvrij, waaronder gegrild vlees, salades en bepaalde mezze. Informeer ons personeel over uw dieetwensen en wij adviseren u graag geschikte opties."
+    },
+    "q10": {
+      "question": "Kan ik een privé-evenement organiseren in jullie restaurant?",
+      "answer": "Ja, wij bieden catering en privédiners aan. Of het nu gaat om een huwelijk, bedrijfsevenement of verjaardagsfeest, wij stellen graag een menu en opstelling op maat samen. Neem contact met ons op om uw evenement te bespreken."
+    }
   }
 }

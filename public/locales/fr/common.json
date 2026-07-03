@@ -1535,5 +1535,51 @@
       "reserveTable": "Réserver une Table",
       "orderTakeaway": "Commander à Emporter"
     }
+  },
+  "faq": {
+    "title": "Questions Fréquentes",
+    "subtitle": "Tout ce que vous devez savoir sur East At West, restaurant libanais à Bruxelles",
+    "stillQuestions": "Vous avez encore des questions ?",
+    "contactUs": "Contactez-nous",
+    "q1": {
+      "question": "Quels sont vos horaires d'ouverture ?",
+      "answer": "Nous sommes ouverts du lundi au vendredi de 11h30 à 14h00 pour le déjeuner. Le samedi, nous servons le dîner de 18h00 à 22h00. Nous sommes fermés le dimanche."
+    },
+    "q2": {
+      "question": "Votre restaurant est-il certifié halal ?",
+      "answer": "Oui, toutes nos viandes et volailles sont certifiées halal. Nous sommes fiers de servir une cuisine libanaise authentique préparée selon les normes halal."
+    },
+    "q3": {
+      "question": "Proposez-vous des plats végans et végétariens ?",
+      "answer": "Absolument ! Nous proposons une grande variété de plats végans et végétariens, notamment le houmous, les falafels, le taboulé, la fattouche, les légumes grillés et de nombreux mezzés. Notre carte indique clairement les options végétariennes et véganes."
+    },
+    "q4": {
+      "question": "Puis-je réserver une table ?",
+      "answer": "Oui, nous vous recommandons vivement de réserver, surtout pour le dîner et les week-ends. Vous pouvez réserver une table via la page réservations de notre site ou nous appeler au +32 465 20 60 24."
+    },
+    "q5": {
+      "question": "Proposez-vous un service à emporter ?",
+      "answer": "Oui, tous les plats de notre carte sont disponibles à emporter. Vous pouvez consulter notre menu à emporter en ligne et passer commande pour un retrait sur place. Nous proposons également un service traiteur pour vos événements."
+    },
+    "q6": {
+      "question": "Y a-t-il un parking à proximité du restaurant ?",
+      "answer": "Oui, plusieurs options de stationnement public sont disponibles près de notre adresse au Bld de l'Empereur 26 à Bruxelles. Vous trouverez du stationnement en voirie ainsi que des parkings couverts à proximité."
+    },
+    "q7": {
+      "question": "Accueillez-vous les grands groupes ?",
+      "answer": "Oui, nous accueillons les réservations de groupe pour les occasions spéciales, les événements d'entreprise et les repas privés. Veuillez nous contacter à l'avance pour discuter de vos besoins et nous organiserons tout pour votre événement."
+    },
+    "q8": {
+      "question": "Quels moyens de paiement acceptez-vous ?",
+      "answer": "Nous acceptons les espèces, les cartes de crédit et les cartes de débit (Visa, Mastercard, American Express). Le paiement peut être effectué au restaurant ou lors du retrait de votre commande à emporter."
+    },
+    "q9": {
+      "question": "Proposez-vous des options sans gluten ?",
+      "answer": "Beaucoup de nos plats sont naturellement sans gluten, notamment les viandes grillées, les salades et certains mezzés. Veuillez informer notre personnel de vos restrictions alimentaires et nous vous recommanderons volontiers des options adaptées."
+    },
+    "q10": {
+      "question": "Puis-je organiser un événement privé dans votre restaurant ?",
+      "answer": "Oui, nous proposons un service traiteur et des repas privés. Qu'il s'agisse d'un mariage, d'un événement d'entreprise ou d'un anniversaire, nous pouvons créer un menu et une organisation sur mesure. Contactez-nous pour discuter de votre événement."
+    }
   }
 }
