@@ -8,6 +8,7 @@
     "takeaway": "À Emporter",
     "blog": "Blog",
     "events": "Événements & Traiteur",
+    "faq": "FAQ",
     "about": "À Propos",
     "contact": "Contact",
     "gallery": "Galerie"
@@ -747,7 +748,7 @@
       "minGuests": "Minimum 1 invité requis",
       "maxGuests": "Maximum 22 invités autorisés. Veuillez nous contacter directement pour des groupes plus importants.",
       "approvalRequired": "Les réservations pour 10 personnes ou plus nécessitent une approbation. Votre réservation sera marquée comme en attente jusqu'à confirmation par notre équipe.",
-    "approvalWarning": "Les réservations pour 10 personnes ou plus nécessitent une approbation. Votre réservation sera marquée comme en attente jusqu'à confirmation par notre équipe."
+      "approvalWarning": "Les réservations pour 10 personnes ou plus nécessitent une approbation. Votre réservation sera marquée comme en attente jusqu'à confirmation par notre équipe."
     }
   },
   "takeaway": {
@@ -1115,7 +1116,7 @@
   "about": {
     "title": "Découvrez la cuisine libanaise à Bruxelles",
     "heroSubtitle": "Découvrez notre passion pour la cuisine méditerranéenne et notre parcours",
-    "part1": "Bienvenue sur notre site, célébrant le monde captivant de la cuisine libanaise ! Chez \u201c East At West \u201c, nous nous engageons à présenter les saveurs riches, les couleurs vibrantes et l'héritage culturel des traditions culinaires libanaises, au cœur de Bruxelles !",
+    "part1": "Bienvenue sur notre site, célébrant le monde captivant de la cuisine libanaise ! Chez “ East At West “, nous nous engageons à présenter les saveurs riches, les couleurs vibrantes et l'héritage culturel des traditions culinaires libanaises, au cœur de Bruxelles !",
     "part2": "La cuisine libanaise est un véritable chef-d'œuvre culinaire, fusionnant le meilleur des saveurs méditerranéennes, arabes et levantines. Nous vous invitons à embarquer pour un voyage qui vous fera découvrir une gamme d'épices aromatiques, d'ingrédients frais, de repas sains et une diversité de plats aussi exquis que satisfaisants.",
     "chefSectionTitle": "Rencontrez Notre Chef Étoilé",
     "heading": "Chef Hanna !",
@@ -1535,4 +1536,4 @@
       "orderTakeaway": "Commander à Emporter"
     }
   }
-} 
+}

@@ -8,6 +8,7 @@
     "takeaway": "Take-Away",
     "blog": "Blog",
     "events": "Events & Catering",
+    "faq": "FAQ",
     "about": "About Us",
     "contact": "Contact",
     "gallery": "Gallery"
@@ -164,7 +165,6 @@
       "sahten": {
         "description": "• Tabouleh\n• Hummus\n• Toshka\n• Sujuk\n• Chicken liver\n• 2X Kibbeh\n• 2X Kabab skewers\n• 2X Chich taouk skewers\n• 2X Dessert: Aish el Saraya (sweetened biscuit, vegan pudding, orange blossom water & Pistachio)"
       },
-      
       "readMore": "Read More",
       "readLess": "Read Less"
     },
@@ -748,7 +748,7 @@
       "minGuests": "Minimum 1 guest required",
       "maxGuests": "Maximum 22 guests allowed. Please contact us directly for larger groups.",
       "approvalRequired": "Reservations for 10 or more guests require approval. Your reservation will be marked as pending until confirmed by our staff.",
-    "approvalWarning": "Reservations for 10 or more guests require approval. Your reservation will be marked as pending until confirmed by our staff."
+      "approvalWarning": "Reservations for 10 or more guests require approval. Your reservation will be marked as pending until confirmed by our staff."
     }
   },
   "takeaway": {
@@ -1116,7 +1116,7 @@
   "about": {
     "title": "Discover Lebanese Cuisine in Brussels",
     "heroSubtitle": "Learn about our passion for Mediterranean cuisine and our journey",
-    "part1": "Welcome to our website, celebrating the captivating world of Lebanese cuisine! At \u201d East At West \u201d we are dedicated to present the rich flavors, vibrant colors, and cultural heritage of Lebanese culinary traditions, in the heart of Brussels!",
+    "part1": "Welcome to our website, celebrating the captivating world of Lebanese cuisine! At ” East At West ” we are dedicated to present the rich flavors, vibrant colors, and cultural heritage of Lebanese culinary traditions, in the heart of Brussels!",
     "part2": "Lebanese cuisine is a true culinary masterpiece, fusing the best of Mediterranean, Arabic, and Levantine flavors. We invite you to embark on a journey that will introduce you to an array of aromatic spices, fresh ingredients, healthy meals and a diverse range of dishes that are as exquisite as they are satisfying.",
     "chefSectionTitle": "Meet Our Master Chef",
     "heading": "Chef Hanna!",
@@ -1217,7 +1217,6 @@
       }
     }
   },
-
   "events": {
     "title": "Events & Catering",
     "subtitle": "Creating Memorable Culinary Experiences",
@@ -1541,4 +1540,4 @@
       "orderTakeaway": "Order Takeaway"
     }
   }
-} 
+}

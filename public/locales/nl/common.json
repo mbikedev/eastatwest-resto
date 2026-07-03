@@ -8,6 +8,7 @@
     "takeaway": "Take-Away",
     "blog": "Blog",
     "events": "Evenementen & Catering",
+    "faq": "FAQ",
     "about": "Over Ons",
     "contact": "Contact",
     "gallery": "Galerij"
@@ -686,13 +687,6 @@
     "thankYouForChoosing": "Bedankt voor het kiezen van East at West",
     "contactUsForQuestions": "Als u vragen heeft, neem dan contact met ons op",
     "unsubscribeFromEmails": "Afmelden voor e-mails",
-    "businessHours": "Openingsuren",
-    "bookingTimes": "Reservatietijden",
-    "lunch": "LUNCH",
-    "dinner": "DINER",
-    "saturday": "Zaterdag",
-    "lastReservationLunch": "Laatste reservatie om 13:30",
-    "lastReservationDinner": "Laatste reservatie om 20:30",
     "lastReservationAt": "Laatste reservatie om",
     "until": "Tot",
     "approvalRequiredMessage": "Reserveringen voor 10 personen of meer vereisen goedkeuring. Uw reservatie wordt als in behandeling gemarkeerd totdat ons personeel deze bevestigt.",
@@ -754,7 +748,7 @@
       "minGuests": "Minimaal 1 gast vereist",
       "maxGuests": "Maximaal 22 gasten toegestaan. Neem direct contact met ons op voor grotere groepen.",
       "approvalRequired": "Reserveringen voor 10 personen of meer vereisen goedkeuring. Uw reservatie wordt als in behandeling gemarkeerd totdat ons personeel deze bevestigt.",
-    "approvalWarning": "Reserveringen voor 10 personen of meer vereisen goedkeuring. Uw reservatie wordt als in behandeling gemarkeerd totdat ons personeel deze bevestigt."
+      "approvalWarning": "Reserveringen voor 10 personen of meer vereisen goedkeuring. Uw reservatie wordt als in behandeling gemarkeerd totdat ons personeel deze bevestigt."
     }
   },
   "takeaway": {
@@ -1374,7 +1368,6 @@
       "conclusion": "Conclusie",
       "bestRestaurants": "Beste Vegetarische Restaurants Brussel, België"
     },
-
     "restaurantGuru": {
       "title": "Trots erkend door Restaurant Guru",
       "subtitle": "Viering van jaren van uitmuntendheid van 2021 tot 2024"
@@ -1550,4 +1543,4 @@
       "orderTakeaway": "Bestel Afhaal"
     }
   }
-} 
+}

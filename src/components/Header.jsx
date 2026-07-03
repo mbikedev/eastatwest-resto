@@ -142,6 +142,7 @@ const Header = () => {
                 { href: '/takeaway', label: t('nav.takeaway') },
                 { href: '/blog', label: t('nav.blog') },
                 { href: '/events-catering', label: t('nav.events') },
+                { href: '/faq', label: t('nav.faq') },
                 { href: '/about', label: t('nav.about') }
               ].map((item, index) => {
                 const isActive = pathname === item.href
@@ -259,6 +260,7 @@ const Header = () => {
                   { href: '/takeaway', label: t('nav.takeaway'), icon: '🥡' },
                   { href: '/blog', label: t('nav.blog'), icon: '📝' },
                   { href: '/events-catering', label: t('nav.events'), icon: '🎉' },
+                  { href: '/faq', label: t('nav.faq'), icon: '❓' },
                   { href: '/about', label: t('nav.about'), icon: '👥' }
                 ].map((item, index) => {
                   const isActive = pathname === item.href
