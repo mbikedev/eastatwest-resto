@@ -989,7 +989,8 @@
       "timeRequired": "Tijd is verplicht",
       "streetRequired": "Straat is verplicht",
       "cityRequired": "Stad is verplicht",
-      "postalCodeRequired": "Postcode is verplicht"
+      "postalCodeRequired": "Postcode is verplicht",
+      "closedOnDate": "Wij zijn gesloten op deze datum ({{name}}). Kies een andere datum."
     }
   },
   "payment": {

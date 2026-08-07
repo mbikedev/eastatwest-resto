@@ -989,7 +989,8 @@
       "timeRequired": "L'heure est requise",
       "streetRequired": "L'adresse est requise",
       "cityRequired": "La ville est requise",
-      "postalCodeRequired": "Le code postal est requis"
+      "postalCodeRequired": "Le code postal est requis",
+      "closedOnDate": "Nous sommes fermés à cette date ({{name}}). Veuillez choisir une autre date."
     }
   },
   "payment": {

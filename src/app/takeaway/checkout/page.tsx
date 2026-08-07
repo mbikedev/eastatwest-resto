@@ -7,6 +7,8 @@ import { useTranslation } from 'react-i18next'
 import { useTheme } from '../../../context/ThemeContext'
 import { useCart } from '../../../context/CartContext'
 import { OrderFormData, DeliveryType, MultilingualText } from '../../../types/takeaway'
+import { Holiday } from '../../../types/holidays'
+import { isDateInHolidayRange } from '../../../lib/holidayUtils'
 import { m } from 'framer-motion'
 
 export default function CheckoutPage() {
@@ -35,6 +37,7 @@ export default function CheckoutPage() {
   const [loading, setLoading] = useState(false)
   const [errors, setErrors] = useState<Record<string, string>>({})
   const [minDate, setMinDate] = useState('')
+  const [holidays, setHolidays] = useState<Holiday[]>([])
 
   // Redirect if cart is empty
   useEffect(() => {
@@ -49,6 +52,33 @@ export default function CheckoutPage() {
     setMinDate(today)
     setFormData(prev => ({ ...prev, delivery_date: today }))
   }, [])
+
+  // Load closure dates so customers cannot order for a day we are closed
+  useEffect(() => {
+    const fetchHolidays = async () => {
+      try {
+        const response = await fetch('/api/holidays/active')
+        const result = await response.json()
+        if (result.success && Array.isArray(result.data)) {
+          setHolidays(result.data)
+        }
+      } catch {
+        // Non-fatal: the database still rejects orders placed on a closure date
+      }
+    }
+    fetchHolidays()
+  }, [])
+
+  // Check whether a YYYY-MM-DD string falls on a closure date
+  const getHolidayForDate = (dateString: string): Holiday | undefined => {
+    if (!dateString) return undefined
+    const [year, month, day] = dateString.split('-').map(Number)
+    if (!year || !month || !day) return undefined
+    const date = new Date(year, month - 1, day)
+    return holidays.find(holiday => isDateInHolidayRange(date, holiday))
+  }
+
+  const selectedHoliday = getHolidayForDate(formData.delivery_date)
 
   // Get product name and description in current language
   const getLocalizedText = (multilingualText: MultilingualText) => {
@@ -78,6 +108,11 @@ export default function CheckoutPage() {
 
     if (!formData.delivery_date) {
       newErrors.delivery_date = t('checkout.validation.dateRequired')
+    } else {
+      const holiday = getHolidayForDate(formData.delivery_date)
+      if (holiday) {
+        newErrors.delivery_date = t('checkout.validation.closedOnDate', { name: holiday.name })
+      }
     }
 
     if (!formData.delivery_time) {
@@ -543,7 +578,15 @@ export default function CheckoutPage() {
               {/* Date and Time */}
               <div>
                 <h3 className="text-lg font-semibold mb-4">{t('checkout.dateTime')}</h3>
-                
+
+                {selectedHoliday && (
+                  <div className="mb-4 p-4 rounded-lg border border-red-500/50 bg-red-500/10">
+                    <p className="text-sm font-semibold text-red-500">
+                      {t('checkout.validation.closedOnDate', { name: selectedHoliday.name })}
+                    </p>
+                  </div>
+                )}
+
                 <div className="grid grid-cols-2 gap-4">
                   <div>
                     <label htmlFor="delivery_date" className="block text-sm font-medium mb-2">
