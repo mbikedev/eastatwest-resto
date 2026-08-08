@@ -138,7 +138,7 @@ export default function GalleryPage() {
     // Lunch dishes
     '/images/lunch-dishes/alepo-mix.webp',
     '/images/lunch-dishes/falafel.webp',
-    '/images/lunch-dishes/kebab-dish.webp',
+    '/images/lunch-dishes/kebab.webp',
     '/images/lunch-dishes/plat-vegan.webp',
     '/images/lunch-dishes/shish-taouk.webp',
     '/images/lunch-dishes/toshka-leban.webp',
@@ -265,7 +265,7 @@ export default function GalleryPage() {
 
       // Lunch dishes
       'alepo-mix': { title: 'Aleppo Mixed Grill', description: 'Assorted grilled meats from Aleppo' },
-      'kebab-dish': { title: 'Kebab Platter', description: 'Grilled kebab with rice and vegetables' },
+      'kebab': { title: 'Kebab Platter', description: 'Grilled kebab with rice and vegetables' },
       'plat-vegan': { title: 'Vegan Platter', description: 'Plant-based Lebanese specialties' },
       'shish-taouk': { title: 'Shish Taouk', description: 'Grilled marinated chicken skewers' },
       'toshka-leban': { title: 'Toshka Leban', description: 'Grilled meat with yogurt sauce' },
